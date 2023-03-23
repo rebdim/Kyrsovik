@@ -1,0 +1,123 @@
+﻿<Window x:Class="Kyrsovik.WindowsFolder.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kyrsovik.WindowsFolder"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip"
+        Height="750" Width="1200"
+        MaxHeight="750" MaxWidth="1200"
+        MinHeight="750" MinWidth="1200">
+    <Border Style="{DynamicResource MainBorder}"
+            MouseDown="Border_MouseDown">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border Style="{DynamicResource TopBorder}" Height="120"/>
+
+            <Label Content="Меню администратора"
+                   Style="{DynamicResource HeadingLabel}"
+                   Foreground="White"
+                   HorizontalAlignment="Left"/>
+
+            <Image x:Name="CloseIm"
+                   HorizontalAlignment="Right"
+                   Width="60" Height="60"
+                   Margin="0,0,20,0"
+                   MouseLeftButtonDown="CloseIm_MouseLeftButtonDown"
+                   Source="/ResourceFolder/ImageFolder/Krestik.png"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="225"/>
+
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel
+
+                         
+                        
+                        Background="{DynamicResource MainBackGround}"
+                       >
+                        <Image Source="/ResourceFolder/ImageFolder/Logo2.png"
+                               Width="200"/>
+
+                    </StackPanel>
+
+                    <StackPanel  Grid.Row="1" Background="{DynamicResource MainBackGround}">
+
+                        <Button x:Name="ListOrderBtn" Width="210"
+                                HorizontalAlignment="Left"
+                                Click="ListOrderBtn_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Список заказов " Style="{DynamicResource ButtonTextBlock}"/>
+
+                                <!--<Image Source=""/>-->
+
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="AddOrderBtn" Width="210"
+                                HorizontalAlignment="Left"
+                                Click="AddOrderBtn_Click">
+                            <StackPanel Orientation="Horizontal">
+
+                                <!--<Image Source=""/>-->
+                                <TextBlock Text="Добавить заказ" Style="{DynamicResource ButtonTextBlock}"
+                                           HorizontalAlignment="Left"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
+
+                    <!--<Button x:Name="ExitBtn" Width="190"
+                            HorizontalContentAlignment="Left"
+                            VerticalAlignment="Bottom"
+                            Grid.Row="1"
+                            Click="ExitBtn_Click"  Cursor="Hand">
+                        <StackPanel Orientation="Horizontal">
+                            --><!--<Image Source =""/>--><!--
+                            <TextBlock Text="Назад"
+                                       Style="{DynamicResource ButtonTextBlock}"/>
+                        </StackPanel>
+                    </Button>-->
+
+                </Grid>
+
+                    <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Style="{DynamicResource HeadingLabel}"
+                           Content="{Binding ElementName=MainFrame,
+                        Path=Content.Title}"/>
+                    <Frame Grid.Row="1" Name="MainFrame" Margin="10"
+                           NavigationUIVisibility="Hidden"/>
+
+                    </Grid>
+
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

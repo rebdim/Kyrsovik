@@ -1,0 +1,108 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--MaterialDesign-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="MainBackGround" Color="#FF8B00"/>
+
+    <SolidColorBrush x:Key="MainAccentuation" Color="#A65A00"/>
+
+    <SolidColorBrush x:Key="MainAdditionalBackground" Color="#ffff"/>
+
+    <SolidColorBrush x:Key="FillFon" Color="#ECF5FA"/>
+
+    <SolidColorBrush x:Key="FillFont" Color="#184562"/>
+
+
+    <Style x:Key="MainBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="CornerRadius" Value="17"/>
+        <Setter Property="BorderBrush"
+                Value="{StaticResource MainBackGround}"/>
+    </Style>
+
+    <Style x:Key="TopBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" 
+                Value="{StaticResource MainBackGround}"/>
+        <Setter Property="CornerRadius" Value="17"/>
+    </Style>
+
+    <Style x:Key="DownBorder" TargetType="{x:Type Border}">
+        <Setter Property="Background" 
+                Value="{StaticResource MainBackGround}"/>
+        <Setter Property="CornerRadius" Value="17"/>
+    </Style>
+
+    <Style x:Key="HeadingLabel" TargetType="{x:Type Label}">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}"
+           BasedOn="{StaticResource MaterialDesignOutlinedTextBox}">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <Style TargetType="{x:Type PasswordBox}"
+           BasedOn="{StaticResource MaterialDesignOutlinedPasswordBox}">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <Style TargetType="{x:Type Button}"
+           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{StaticResource MainAccentuation}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="Width" Value="300"/>
+    </Style>
+
+    <Style x:Key="ButtonTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="Gardens CM"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Margin" Value="5,0,0,0"/>
+    </Style>
+
+    <Style TargetType="{x:Type ComboBox}"
+           BasedOn="{StaticResource MaterialDesignOutlinedComboBox}">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+    <Style x:Key="listTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="Roboto"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5,5,10,5"/>
+    </Style>
+    
+</ResourceDictionary>
